@@ -16,7 +16,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 263 70% 50%;
+    --primary: 196 84% 49%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -25,7 +25,7 @@
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 25 95% 53%;
+    --accent: 49 100% 50%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -33,7 +33,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 263 70% 50%;
+    --ring: 196 84% 49%;
 
     --radius: 0.5rem;
   }
@@ -43,10 +43,10 @@
   }
 
   body {
-    @apply bg-gamer-dark text-foreground;
+    @apply bg-fortnite-dark text-foreground;
     background-image: 
-      radial-gradient(circle at 25px 25px, rgba(139, 92, 246, 0.15) 2%, transparent 0%),
-      radial-gradient(circle at 75px 75px, rgba(14, 165, 233, 0.1) 2%, transparent 0%);
+      radial-gradient(circle at 25px 25px, rgba(30, 174, 219, 0.15) 2%, transparent 0%),
+      radial-gradient(circle at 75px 75px, rgba(250, 200, 0, 0.1) 2%, transparent 0%);
     background-size: 100px 100px;
   }
 
@@ -55,33 +55,34 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-gamer-darker;
+    @apply bg-fortnite-darker;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-gamer-purple/60 rounded-full;
+    @apply bg-fortnite-blue/60 rounded-full;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-gamer-purple/80;
+    @apply bg-fortnite-blue/80;
   }
 }
 
 @layer components {
-  .gamer-card {
-    @apply bg-gradient-to-br from-gamer-gray to-gamer-darker border border-gamer-purple/20 rounded-lg overflow-hidden relative;
+  .fortnite-card {
+    @apply bg-gradient-to-br from-fortnite-dark to-fortnite-darker border border-fortnite-blue/20 rounded-lg overflow-hidden relative;
+    box-shadow: 0 0 15px rgba(30, 174, 219, 0.2);
   }
   
-  .gamer-card::before {
+  .fortnite-card::before {
     content: '';
-    @apply absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-transparent to-gamer-purple/10 pointer-events-none;
+    @apply absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-transparent to-fortnite-blue/10 pointer-events-none;
   }
 
-  .pixelated-border {
+  .fortnite-border {
     position: relative;
   }
 
-  .pixelated-border::after {
+  .fortnite-border::after {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -89,28 +90,32 @@
     height: 2px;
     width: 100%;
     background-image: linear-gradient(to right, 
-      #8B5CF6 0%, #8B5CF6 12.5%, 
+      #1EAEDB 0%, #1EAEDB 12.5%, 
       transparent 12.5%, transparent 25%, 
-      #8B5CF6 25%, #8B5CF6 37.5%, 
+      #1EAEDB 25%, #1EAEDB 37.5%, 
       transparent 37.5%, transparent 50%, 
-      #8B5CF6 50%, #8B5CF6 62.5%, 
+      #1EAEDB 50%, #1EAEDB 62.5%, 
       transparent 62.5%, transparent 75%, 
-      #8B5CF6 75%, #8B5CF6 87.5%, 
+      #1EAEDB 75%, #1EAEDB 87.5%, 
       transparent 87.5%, transparent 100%
     );
   }
 
-  .btn-gamer {
-    @apply px-6 py-3 rounded-md font-gaming font-bold bg-gamer-purple text-white hover:bg-gamer-purple/80 transition-all duration-300 relative overflow-hidden;
+  .btn-fortnite {
+    @apply px-6 py-3 rounded-md font-gaming font-bold bg-fortnite-blue text-white hover:bg-fortnite-blue/80 transition-all duration-300 relative overflow-hidden;
   }
 
-  .btn-gamer::after {
+  .btn-fortnite::after {
     content: '';
     @apply absolute bottom-0 left-0 w-full h-1 bg-white opacity-20;
   }
 
-  .btn-gamer:hover::after {
+  .btn-fortnite:hover::after {
     animation: btn-glow 1.5s ease-in-out infinite;
+  }
+
+  .btn-fortnite-secondary {
+    @apply px-6 py-3 rounded-md font-gaming font-bold bg-fortnite-yellow text-fortnite-dark hover:bg-fortnite-yellow/80 transition-all duration-300 relative overflow-hidden;
   }
 
   @keyframes btn-glow {
@@ -125,11 +130,25 @@
   }
 
   .skill-badge {
-    @apply bg-gamer-darker border border-gamer-purple/30 px-3 py-1 rounded-md text-sm font-gaming relative;
+    @apply bg-fortnite-darker border border-fortnite-blue/30 px-3 py-1 rounded-md text-sm font-gaming relative;
   }
 
   .skill-badge::before {
     content: '';
-    @apply absolute top-0 left-0 w-1 h-full bg-gamer-purple;
+    @apply absolute top-0 left-0 w-1 h-full bg-fortnite-blue;
+  }
+
+  .fortnite-highlight {
+    @apply text-fortnite-yellow font-bold;
+  }
+
+  .fortnite-section {
+    @apply relative py-20;
+  }
+
+  .fortnite-section::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-full -z-10 opacity-5;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231EAEDB' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
 }

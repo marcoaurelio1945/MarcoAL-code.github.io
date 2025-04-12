@@ -74,6 +74,16 @@ export default {
           'dark': '#121212',
           'darker': '#0A0A0A',
           'gray': '#333333',
+        },
+        fortnite: {
+          'blue': '#1EAEDB',
+          'yellow': '#FAC800',
+          'purple': '#9D4EDD',
+          'pink': '#FF6B81',
+          'turquoise': '#00B4D8',
+          'dark': '#1A1F2C',
+          'darker': '#13161F',
+          'light': '#F5F5F5',
         }
 			},
 			borderRadius: {
@@ -100,10 +110,10 @@ export default {
 				},
         'pulse-glow': {
           '0%, 100%': { 
-            boxShadow: '0 0 5px rgba(139, 92, 246, 0.5), 0 0 10px rgba(139, 92, 246, 0.3)' 
+            boxShadow: '0 0 5px rgba(30, 174, 219, 0.5), 0 0 10px rgba(30, 174, 219, 0.3)' 
           },
           '50%': { 
-            boxShadow: '0 0 15px rgba(139, 92, 246, 0.8), 0 0 20px rgba(139, 92, 246, 0.5)' 
+            boxShadow: '0 0 15px rgba(30, 174, 219, 0.8), 0 0 20px rgba(30, 174, 219, 0.5)' 
           },
         },
         'float': {
@@ -116,6 +126,14 @@ export default {
           '20%': { opacity: '0.8' },
           '25%': { opacity: '0.7' },
         },
+        'battle-bus': {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(200%)' },
+        },
+        'llama-bounce': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-15px) scale(1.05)' },
+        },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -123,6 +141,8 @@ export default {
         'pulse-glow': 'pulse-glow 3s infinite',
         'float': 'float 6s ease-in-out infinite',
         'text-flicker': 'text-flicker 3s linear infinite',
+        'battle-bus': 'battle-bus 15s linear infinite',
+        'llama-bounce': 'llama-bounce 2s ease-in-out infinite',
 			}
 		}
 	},
