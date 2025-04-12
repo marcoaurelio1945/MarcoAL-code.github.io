@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-fortnite-dark">
+    <div className="min-h-screen bg-r6-dark">
       <Navbar />
       <HeroSection />
       <ProjectsSection />

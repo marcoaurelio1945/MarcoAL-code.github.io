@@ -21,7 +21,8 @@ export default {
 		extend: {
       fontFamily: {
         'pixel': ['Press Start 2P', 'cursive'],
-        'gaming': ['Orbitron', 'sans-serif'],
+        'tactical': ['Oswald', 'sans-serif'],
+        'modern': ['Montserrat', 'sans-serif'],
       },
 			colors: {
 				border: 'hsl(var(--border))',
@@ -67,23 +68,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-        gamer: {
-          'purple': '#8B5CF6',
-          'orange': '#F97316',
-          'blue': '#0EA5E9',
+        r6: {
+          'blue': '#4287F5',
+          'orange': '#FF6B00',
+          'red': '#F04747',
           'dark': '#121212',
           'darker': '#0A0A0A',
           'gray': '#333333',
-        },
-        fortnite: {
-          'blue': '#1EAEDB',
-          'yellow': '#FAC800',
-          'purple': '#9D4EDD',
-          'pink': '#FF6B81',
-          'turquoise': '#00B4D8',
-          'dark': '#1A1F2C',
-          'darker': '#13161F',
-          'light': '#F5F5F5',
+          'light': '#E9E9E9',
+          'yellow': '#FFD700',
         }
 			},
 			borderRadius: {
@@ -110,39 +103,43 @@ export default {
 				},
         'pulse-glow': {
           '0%, 100%': { 
-            boxShadow: '0 0 5px rgba(30, 174, 219, 0.5), 0 0 10px rgba(30, 174, 219, 0.3)' 
+            boxShadow: '0 0 5px rgba(66, 135, 245, 0.5), 0 0 10px rgba(66, 135, 245, 0.3)' 
           },
           '50%': { 
-            boxShadow: '0 0 15px rgba(30, 174, 219, 0.8), 0 0 20px rgba(30, 174, 219, 0.5)' 
+            boxShadow: '0 0 15px rgba(66, 135, 245, 0.8), 0 0 20px rgba(66, 135, 245, 0.5)' 
           },
         },
-        'float': {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
+        'tactical-scan': {
+          '0%': { 
+            transform: 'translateY(0)',
+            opacity: '0.1',
+          },
+          '50%': { 
+            opacity: '0.5',
+          },
+          '100%': { 
+            transform: 'translateY(100%)',
+            opacity: '0.1',
+          },
         },
-        'text-flicker': {
-          '0%, 100%': { opacity: '1' },
-          '10%, 30%': { opacity: '0.9' },
-          '20%': { opacity: '0.8' },
-          '25%': { opacity: '0.7' },
+        'drone-float': {
+          '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+          '25%': { transform: 'translateY(-10px) rotate(-5deg)' },
+          '75%': { transform: 'translateY(10px) rotate(5deg)' },
         },
-        'battle-bus': {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(200%)' },
-        },
-        'llama-bounce': {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-15px) scale(1.05)' },
+        'breach-flash': {
+          '0%, 100%': { opacity: '0' },
+          '5%, 15%': { opacity: '0.8' },
+          '30%': { opacity: '0' },
         },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
         'pulse-glow': 'pulse-glow 3s infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'text-flicker': 'text-flicker 3s linear infinite',
-        'battle-bus': 'battle-bus 15s linear infinite',
-        'llama-bounce': 'llama-bounce 2s ease-in-out infinite',
+        'tactical-scan': 'tactical-scan 3s linear infinite',
+        'drone-float': 'drone-float 6s ease-in-out infinite',
+        'breach-flash': 'breach-flash 8s ease-in-out infinite',
 			}
 		}
 	},
