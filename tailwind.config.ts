@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+      fontFamily: {
+        'pixel': ['Press Start 2P', 'cursive'],
+        'gaming': ['Orbitron', 'sans-serif'],
+      },
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +66,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        gamer: {
+          'purple': '#8B5CF6',
+          'orange': '#F97316',
+          'blue': '#0EA5E9',
+          'dark': '#121212',
+          'darker': '#0A0A0A',
+          'gray': '#333333',
+        }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +97,32 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'pulse-glow': {
+          '0%, 100%': { 
+            boxShadow: '0 0 5px rgba(139, 92, 246, 0.5), 0 0 10px rgba(139, 92, 246, 0.3)' 
+          },
+          '50%': { 
+            boxShadow: '0 0 15px rgba(139, 92, 246, 0.8), 0 0 20px rgba(139, 92, 246, 0.5)' 
+          },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        'text-flicker': {
+          '0%, 100%': { opacity: '1' },
+          '10%, 30%': { opacity: '0.9' },
+          '20%': { opacity: '0.8' },
+          '25%': { opacity: '0.7' },
+        },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'pulse-glow': 'pulse-glow 3s infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'text-flicker': 'text-flicker 3s linear infinite',
 			}
 		}
 	},
