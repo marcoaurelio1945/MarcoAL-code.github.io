@@ -1,4 +1,3 @@
-
 import { Code, Shield, Monitor, Trophy, Target, Crosshair } from 'lucide-react';
 
 const AboutSection = () => {
@@ -67,7 +66,7 @@ const AboutSection = () => {
               <Target className="mr-2 text-r6-orange" /> Meu Histórico
             </h3>
             <div className="space-y-4 text-white/80">
-              <p>Olá! Sou um desenvolvedor de software especializado em soluções seguras e de alta performance. Minha jornada começou no desenvolvimento web e evoluiu para especialização em sistemas de segurança e aplicações críticas.</p>
+              <p>Olá! Sou Marco, um desenvolvedor de software especializado em soluções seguras e de alta performance. Minha jornada começou no desenvolvimento web e evoluiu para especialização em sistemas de segurança e aplicações críticas.</p>
               <p>Com mais de 5 anos de experiência em desenvolvimento full stack, tenho focado em criar sistemas robustos que resistem a ameaças modernas e ataques cibernéticos, sempre priorizando a proteção dos dados.</p>
               <p>Acredito que o melhor software combina segurança, usabilidade e performance. Por isso, trabalho de perto com especialistas em UX e segurança para entregar soluções completas e confiáveis.</p>
               <div className="pt-4">

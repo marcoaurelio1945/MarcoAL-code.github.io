@@ -15,12 +15,12 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-6 md:mb-0">
             <Shield className="h-8 w-8 text-r6-blue mr-2" />
-            <span className="font-tactical font-bold text-xl text-white">R6<span className="text-r6-orange">DEV</span></span>
+            <span className="font-tactical font-bold text-xl text-white">MARCO<span className="text-r6-orange">DEV</span></span>
           </div>
           
           <div className="flex items-center">
             <p className="text-white/70 text-sm">
-              &copy; {new Date().getFullYear()} R6S Dev. Todos os direitos reservados.
+              &copy; {new Date().getFullYear()} Marco Dev. Todos os direitos reservados.
             </p>
           </div>
           

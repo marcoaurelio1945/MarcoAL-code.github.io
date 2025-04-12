@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { ChevronDown, Shield, Target, Eye, Lock } from 'lucide-react';
 
@@ -63,7 +62,7 @@ const HeroSection = () => {
         </div>
         
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-tactical font-bold text-white mb-4">
-          <span className="animate-breach-flash">RAINBOW</span> <span className="text-r6-orange">SIX</span> <span className="text-r6-blue">DEV</span>
+          <span className="animate-breach-flash">MARCO</span> <span className="text-r6-orange">SIX</span> <span className="text-r6-blue">DEV</span>
         </h1>
         
         <div className="relative h-10 mb-8">

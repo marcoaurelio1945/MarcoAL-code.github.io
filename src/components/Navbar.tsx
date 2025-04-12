@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Menu, X, Shield, Target, Crosshair } from 'lucide-react';
@@ -36,7 +35,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
           <Shield className="h-8 w-8 text-r6-blue" />
-          <span className="font-tactical font-bold text-xl text-white">R6<span className="text-r6-orange">DEV</span></span>
+          <span className="font-tactical font-bold text-xl text-white">MARCO<span className="text-r6-orange">DEV</span></span>
         </a>
 
         {/* Desktop navigation */}
