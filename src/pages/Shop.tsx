@@ -1,9 +1,8 @@
-
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ProductCard from '@/components/ProductCard';
-import { Search, Filter, SlidersHorizontal, ChevronDown } from 'lucide-react';
+import { Search, Filter, SlidersHorizontal, ChevronDown, Star } from 'lucide-react';
 
 // Dados de exemplo para produtos
 const sampleProducts = [
